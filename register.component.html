@@ -1,0 +1,22 @@
+<form #registrationForm="ngForm" (ngSubmit)="registerMe()">
+  <label for="myname">Name</label>
+   <input type="text" name="myname" required>
+<br>
+  <label for="username">Username</label>
+   <input type="text" name="username" required>
+<br>
+  <label for="email">Email</label>
+  <input type="email" required name="email">
+<br>
+   <label for="mobile">Mobile</label>
+  <input type="mobile" required name="mobile">
+<br>
+  <label for="password">Password</label>
+  <input type="password" required name="password">
+<br>
+  <label for="confirmpassword">Confirm Password</label>
+  <input type="password" required name="confirmpassword">
+<br>
+<button type="submit" [disabled]="!registrationForm.form.valid">REGISTER
+</button>
+</form>
